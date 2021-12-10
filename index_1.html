@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		let count = 0;
+		let login = prompt("Введите логин");
+		let password = prompt("Введите пароль");
+
+		if (login == "ver" && password == 123) {
+			count++
+		}
+		else if (login == "da" && password == 456) {
+			count = count + 2
+		}
+		else if (login == "ba" && pssword == 789) {
+			count = count + 3
+		}
+		if (count == 1) {
+			alert("Круть! Вы директор!");
+		}
+		else if (count == 2) {
+			alert("Круть! Вы админ!");
+		}
+		else if (count == 3) {
+			alert("Добро пожаловать! Простой пользователь");
+		}
+	</script>
+</body>
+</html>
