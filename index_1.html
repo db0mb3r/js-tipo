@@ -8,27 +8,71 @@
 <body>
 	<script type="text/javascript">
 
-		let count = 0;
+		let count = 0
 		let login = prompt("Введите логин");
 		let password = prompt("Введите пароль");
 
-		if (login == "ver" && password == 123) {
-			count = 1
-		}
-		else if (login == "da" && password == 456) {
-			count = 2
-		}
-		else if (login == "ba" && password == 789) {
-			count = 3
-		}
-		if (count == 1) {
-			alert("Круть! Вы директор!");
-		}
-		else if (count == 2) {
-			alert("Круть! Вы админ!");
-		}
-		else if (count == 3) {
-			alert("Добро пожаловать! Простой пользователь.");
+		if (login == "Director") {
+			if (password == 123) {
+				alert("Круть! Вы директор!");
+			} if (password < 123 || password > 123) {
+				alert("Пароль неверный. У вас осталось 3 попытки");
+				count++;
+				password = prompt("Введите пароль");
+			} if (count == 1 && password < 123 || password > 123) {
+				alert("Пароль неверный. У вас осталось 2 попытки");
+				count = count + 2;
+				password = prompt("Введите пароль");
+			} if (count == 2 && password < 123 || password > 123) {
+				alert("Пароль неверный. У вас осталось 1 попытка");
+				count = count + 3;
+				password = prompt("Введите пароль");
+			} if (count == 3 && password < 123 || password > 123) {
+				alert("Пароль неверный. У вас был шанс.");
+			}
+		} else if (login == "Admin") {
+			if (password == 456) {
+				alert("Круть! Вы админ!");
+			} else if (password < 456 || password > 456) {
+				alert("Пароль неверный. У вас осталось 3 попытки");
+				count++;
+				password = prompt("Введите пароль");
+			} if (count == 1 && password == 456) {
+				alert("Круть! Вы админ!");
+			} else if (count == 1 && password < 456 || password > 456) {
+				alert("Пароль неверный. У вас осталось 2 попытки");
+				count = count + 2;
+				password = prompt("Введите пароль");
+			} if (count == 2 && password == 456) {
+				alert("Круть! Вы админ!");
+			} else if (count == 2 && password < 456 || password > 456) {
+				alert("Пароль неверный. У вас осталось 1 попытка");
+				count = count + 3;
+				password = prompt("Введите пароль");
+			} if (count == 3 && password == 456) {
+				alert("Круть! Вы админ!");
+			} else if (count == 3 && password < 456 || password > 456) {
+				alert("Пароль неверный. У вас был шанс.");
+			}
+		} else if (login == "User") {
+			if (password == 789) {
+				alert("Добро пожаловать! Простой пользователь.");
+			} else if (password < 789 || password > 789) {
+				alert("Пароль неверный. У вас осталось 3 попытки");
+				count++;
+			} if (count == 1 && password < 789 || password > 789) {
+				alert("Пароль неверный. У вас осталось 2 попытки");
+				count = count + 2;
+				password = prompt("Введите пароль");
+			} if (count == 2 && password < 789 || password > 789) {
+				alert("Пароль неверный. У вас осталось 1 попытка");
+				count = count + 3;
+				password = prompt("Введите пароль");
+			} if (count == 3 && password < 789 || password > 789) {
+				alert("Пароль неверный. У вас был шанс.");
+			}
+		} else {
+			alert("Такого логина не существует.");
 		}
 
 	</script>
