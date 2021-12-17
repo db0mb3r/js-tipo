@@ -13,13 +13,13 @@
 		let password = prompt("Введите пароль");
 
 		if (login == "ver" && password == 123) {
-			count++
+			count = 1
 		}
 		else if (login == "da" && password == 456) {
-			count = count + 2
+			count = 2
 		}
-		else if (login == "ba" && pssword == 789) {
-			count = count + 3
+		else if (login == "ba" && password == 789) {
+			count = 3
 		}
 		if (count == 1) {
 			alert("Круть! Вы директор!");
@@ -28,8 +28,9 @@
 			alert("Круть! Вы админ!");
 		}
 		else if (count == 3) {
-			alert("Добро пожаловать! Простой пользователь");
+			alert("Добро пожаловать! Простой пользователь.");
 		}
+
 	</script>
 </body>
 </html>
