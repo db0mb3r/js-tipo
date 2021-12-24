@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		let login = prompt("Введите логин");
+		let password = prompt("Введите пароль");
+
+		if (login == "Director") {
+			if (password == 123) {
+				alert("Круть! Вы директор!");
+			} for (let i = 0; i < 3;) {
+				if (password == 123) {
+					i < 3
+					alert("Круть! Вы директор!");
+				} else if (password != 123) {
+					alert (`Пароль неверный`)
+					i++
+				}
+			}
+		} else if (login == "Admin") {
+			if (password == 456) {
+				alert("Круть! Вы админ!");
+			} for (let i = 0; i < 3;) {
+				let password = prompt("Введите пароль");
+				if (password != 456) {
+					alert(`Пароль неверный. У вас осталось ${i} попытки`);
+					i++
+				}
+			}
+		} else if (login == "User") {
+			if (password == 789) {
+				alert("Добро пожаловать! Простой пользователь.");
+			} 
+		} else {
+			alert("Такого логина не существует.");
+		}
+
+	</script>
+</body>
+</html>
