@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var login = prompt("Введите логин");
+		var password
+
+		for (let i = 3; i > -1;) {
+			if (login == "Director") {
+				password = prompt("Введите пароль");
+				if (password != 123) {
+					alert (`Пароль неверный. Ваше количество попыток: ${i}.`);
+					i--;
+				}
+				if (password == 123) {
+					alert("Круть! Вы директор!");
+					i = -1;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

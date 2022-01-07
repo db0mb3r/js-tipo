@@ -8,35 +8,48 @@
 <body>
 	<script type="text/javascript">
 
-		let login = prompt("Введите логин");
-		let password = prompt("Введите пароль");
+		var login = prompt("Введите логин");
+		var password = prompt("Введите пароль");
+		let i = 2;
 
 		if (login == "Director") {
 			if (password == 123) {
 				alert("Круть! Вы директор!");
-			} for (let i = 0; i < 3;) {
-				if (password == 123) {
-					i < 3
-					alert("Круть! Вы директор!");
-				} else if (password != 123) {
-					alert (`Пароль неверный`)
-					i++
+			} else if (password != 123) {
+				alert ("Пароль неверный. Ваше количество попыток: 3.");
+				for (let i = 2; i > -1;) {
+					password = prompt("Введите пароль");
+					if (password != 123) {
+						alert (`Пароль неверный. Ваше количество попыток: ${i}.`);
+						i--;
+					} else if (password == 123) {
+						i = -1;
+						alert("Круть! Вы директор!");
+					}
 				}
 			}
 		} else if (login == "Admin") {
 			if (password == 456) {
 				alert("Круть! Вы админ!");
-			} for (let i = 0; i < 3;) {
-				let password = prompt("Введите пароль");
-				if (password != 456) {
-					alert(`Пароль неверный. У вас осталось ${i} попытки`);
-					i++
+			} else if (password != 456) {
+				alert ("Пароль неверный. Ваше количество попыток: 3.");
+				while (i > -1) {
+					password = prompt("Введите пароль");
+					if (password != 456) {
+						alert(`Пароль неверный. У вас осталось ${i} попытки`);
+						i--;
+					} else if (password == 456) {
+						alert("Круть! Вы админ!");
+						i = -1;
+					}
 				}
 			}
 		} else if (login == "User") {
 			if (password == 789) {
 				alert("Добро пожаловать! Простой пользователь.");
-			} 
+			} else if (password != 789) {
+				alert ("Пароль неверный. Ваше количество попыток: 3.");
+			}
 		} else {
 			alert("Такого логина не существует.");
 		}
