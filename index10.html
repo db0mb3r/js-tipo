@@ -12,9 +12,16 @@
 		let arr_calendar = day_month_counter.split(".");
 
 		let calendar = (day, month) => {
+			let count_of_month = 0;
 			switch(month) {
 				case 1:
-					alert("Январь");
+					count_of_month = "Январь"
+					if (day % 7 == 1) {
+						alert(`Месяц: ${count_of_month}, понедельник`);
+					} else if (day % 7 == 2) {alert(`Месяц ${count_of_month}, вторник`);}
+					break;
+				case 2:
+					alert("Февраль")
 			}
 		}
 
